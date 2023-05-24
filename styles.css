@@ -1,0 +1,160 @@
+:root {
+    /* Primary */
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    margin: 2rem 1rem;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+/* Section Image */
+.img-mobile {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.img-desktop {
+    display: none;
+}
+
+/* Section Text */
+.section-text {
+    padding: 1.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: .7rem;
+    color: var(--darkGrayishBlue);
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--veryDarkBlue);
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-block: 1rem;
+}
+
+p {
+    color: var(--darkGrayishBlue);
+    font-size: 14px;
+    line-height: 1.35rem;
+}
+
+.section-text div {
+    margin-block: 2rem 1rem;
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+}
+
+.section-text div > p {
+    text-decoration: line-through;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    color: var(--darkCyan);
+    font-size: 2rem;
+}
+
+/* Button */
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background-color: var(--darkCyan);
+    color: var(--white);
+    border-style: none;
+    width: 100%;
+    padding: .9rem;
+    border-radius: 10px;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+}
+
+button:hover, button:active {
+    background-color: #013220;
+    transition: .25s ease-in-out;
+}
+
+/* Footer */
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+footer a { 
+    text-decoration: none;
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        min-width: 610px;
+        max-width: 684px;
+        margin: 5rem auto;
+        border-radius: 10px;
+        display: flex;
+        width: 45%;
+    }
+
+    main > * {
+        flex: 1 1 50%;
+    }
+    
+    /* Section Image */
+    .img-mobile {
+        display: none;
+    }
+    
+    .img-desktop {
+        display: block;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    /* Section Text */
+    .section-text {
+        padding: 2rem;
+    }
+
+    h1 {
+        margin-block: 1.5rem;
+    }
+
+    .section-text div {
+        margin-block: 2rem;
+        gap: .9rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        margin: 10rem auto;
+    }
+}
